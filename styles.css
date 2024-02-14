@@ -2,15 +2,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  overflow: hidden;
+  height: 100dvh;
+  background: linear-gradient(180deg, rgba(74,70,150,1) 0%, rgba(9,9,121,1) 35%, rgba(74,0,255,0.18100650904893212) 75%, maroon 100%);
 }
 
-#btn-input {
-  padding: 50px;
+footer {
+  font-size: small;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#title {
+  color: whitesmoke;
+  text-shadow: maroon 2px 3px;
+  text-align: center;
+}
+
+#btn-container {
+  padding: 20px;
 }
 
 #container {
   height: 600px;
   width: 600px;
   border: 5px solid black;
+  background: white;
 }
