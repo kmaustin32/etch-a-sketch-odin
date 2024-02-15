@@ -30,9 +30,27 @@ footer {
   padding: 20px;
 }
 
+#btn-container > button {
+  padding: 10px 40px;
+  font-weight: bold;
+  transition: all .5s ease;
+}
+
+#btn-container > button:hover {
+  transform: scale(1.2);
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
 #container {
   height: 600px;
   width: 600px;
   border: 5px solid black;
   background: white;
+  display: flex;
+}
+
+.emptyCell {
+  background-color: whitesmoke;
+  border: 1px solid black;
 }
