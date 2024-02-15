@@ -48,16 +48,18 @@ footer {
   border: 5px solid black;
   background: white;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .emptyCell {
   background-color: whitesmoke;
   border: 1px solid black;
   cursor: pointer;
-  flex: 1;
 }
 
 .coloredCell {
   background-color: dimgrey;
+  border: 1px solid black;
+  cursor: pointer;
 }
