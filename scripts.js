@@ -3,15 +3,22 @@ const btnGrid = document.querySelector('button');
 let tileNum = 0;
 
 btnGrid.addEventListener('click', (e) => {
-  while (isNaN(tileNum) || tileNum > 60 || tileNum < 10) {
-    tileNum = prompt('Please pick a number between 10 and 60.')
-    tileNum = parseInt(tileNum);
-    console.log(`final num: ${tileNum}`)
-    
-    removeGrid();
-    initializeGrid(tileNum);
+  let promptActive = true;
+
+  while (promptActive) {
+    if (isNaN(tileNum) || tileNum > 60 || tileNum < 10) {
+      tileNum = prompt('Please pick a number between 10 and 60.')
+      tileNum = parseInt(tileNum);
+      console.log(`final num: ${tileNum}`)
+    } else {
+      promptActive = false;
+      removeGrid();
+      initializeGrid(tileNum);
+    }
   };
+
   tileNum = 0;
+  console.log(promptActive)
 });
 
 const initializeGrid = (gridSize) => {
