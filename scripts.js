@@ -19,17 +19,17 @@ const initializeGrid = (gridSize) => {
 
   for (let i = 0; i < gridSize; i++) {
     let row = document.createElement('div');
+    row.classList.add('row');
 
     for (let j = 0; j < gridSize; j++) {
       let tile = document.createElement('div');
-      tile.classList.add('emptyCell');
+      tile.classList.add('cell');
       
       tile.addEventListener('mouseover', (e) => {
-        tile.classList.toggle('coloredCell');
-        tile.classList.toggle('emptyCell');
+        tile.classList.toggle('colored');
       });
 
-      tile.textContent = j + 1;
+      // tile.textContent = j + 1;
       row.appendChild(tile);
     };
 
