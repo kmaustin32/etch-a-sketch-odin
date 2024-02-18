@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
-const btnGrid = document.querySelector('button');
+const btnGrid = document.querySelector('#ch-btn');
+const clearBtn = document.querySelector('#clear');
 let tileNum = 0;
 
 btnGrid.addEventListener('click', (e) => {
@@ -21,6 +22,14 @@ btnGrid.addEventListener('click', (e) => {
   console.log(promptActive)
 });
 
+clearBtn.addEventListener('click', (e) => {
+  let tiles = document.querySelectorAll('.cell');
+
+  for (let i = 0; i < tiles.length; i++) {
+    tiles[i].classList.remove('colored');
+  };
+});
+
 const initializeGrid = (gridSize) => {
   let docFrag = new DocumentFragment();
 
@@ -31,12 +40,7 @@ const initializeGrid = (gridSize) => {
     for (let j = 0; j < gridSize; j++) {
       let tile = document.createElement('div');
       tile.classList.add('cell');
-      
-      tile.addEventListener('mouseover', (e) => {
-        tile.classList.toggle('colored');
-      });
 
-      // tile.textContent = j + 1;
       row.appendChild(tile);
     };
 
@@ -53,3 +57,16 @@ const removeGrid = () => {
 };
 
 initializeGrid(16);
+
+function addContainerEvent() {
+  container.addEventListener('click', (e) => {
+    let tiles = document.querySelectorAll('.cell');
+    for (let i = 0; i < tiles.length; i++) {
+      tiles[i].addEventListener('mouseover', (e) => {
+      e.target.classList.toggle('colored');
+      });
+    };
+  });
+};
+
+addContainerEvent();

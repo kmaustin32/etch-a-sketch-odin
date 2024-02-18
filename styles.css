@@ -17,29 +17,39 @@ body {
 footer {
   font-size: small;
   text-align: center;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 #title {
   color: whitesmoke;
   text-shadow: maroon 2px 3px;
   text-align: center;
+  margin-top: -20px;
 }
 
 #btn-container {
-  padding: 20px;
+  padding: 0 0 20px 0;
 }
 
 #btn-container > button {
   padding: 10px 40px;
   font-weight: bold;
   transition: all .5s ease;
+  width: 180px;
 }
 
 #btn-container > button:hover {
   transform: scale(1.2);
   transition: all .5s ease;
   cursor: pointer;
+}
+
+#ch-btn {
+  margin-right: 10px;
+}
+
+#clear {
+  margin-left: 10px;
 }
 
 #container {
@@ -68,5 +78,6 @@ footer {
 }
 
 .colored {
-  background-color: dimgrey;
+  background-color: #181a1b;
+  border: 1px solid whitesmoke;
 }
