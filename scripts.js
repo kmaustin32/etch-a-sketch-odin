@@ -22,6 +22,14 @@ btnGrid.addEventListener('click', (e) => {
   console.log(promptActive)
 });
 
+clearBtn.addEventListener('click', (e) => {
+  let tiles = document.querySelectorAll('.cell');
+
+  for (let i = 0; i < tiles.length; i++) {
+    tiles[i].classList.remove('colored');
+  };
+});
+
 const initializeGrid = (gridSize) => {
   let docFrag = new DocumentFragment();
 
