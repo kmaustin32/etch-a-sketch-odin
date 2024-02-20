@@ -7,8 +7,8 @@ btnGrid.addEventListener('click', (e) => {
   let promptActive = true;
 
   while (promptActive) {
-    if (isNaN(tileNum) || tileNum > 60 || tileNum < 10) {
-      tileNum = prompt('Please pick a number between 10 and 60.')
+    if (isNaN(tileNum) || tileNum > 64 || tileNum < 8) {
+      tileNum = prompt('Please pick a number between 8 and 64.')
       tileNum = parseInt(tileNum);
       console.log(`final num: ${tileNum}`)
     } else {
@@ -60,6 +60,7 @@ initializeGrid(16);
 
 function addContainerEvent() {
   container.addEventListener('click', (e) => {
+    e.target.classList.add('colored');
     let tiles = document.querySelectorAll('.cell');
     for (let i = 0; i < tiles.length; i++) {
       tiles[i].addEventListener('mouseover', (e) => {

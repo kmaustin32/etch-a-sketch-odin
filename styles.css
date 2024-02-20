@@ -11,7 +11,7 @@ body {
   justify-content: center;
   overflow: hidden;
   height: 100dvh;
-  background: linear-gradient(180deg, rgba(74,70,150,1) 0%, rgba(9,9,121,1) 35%, rgba(74,0,255,0.18100650904893212) 75%, maroon 100%);
+  background: linear-gradient(180deg, rgb(57, 54, 124) 0%, rgb(80, 35, 152) 35%, rgba(74,0,255,0.33) 75%, maroon 100%);
 }
 
 footer {
@@ -34,13 +34,13 @@ footer {
 #btn-container > button {
   padding: 10px 40px;
   font-weight: bold;
-  transition: all .5s ease;
+  transition: all .25s ease;
   width: 180px;
 }
 
 #btn-container > button:hover {
-  transform: scale(1.2);
-  transition: all .5s ease;
+  transform: scale(1.1);
+  transition: all .25s ease;
   cursor: pointer;
 }
 
