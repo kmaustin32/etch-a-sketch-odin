@@ -15,11 +15,9 @@ btnGrid.addEventListener('click', (e) => {
       promptActive = false;
       removeGrid();
       initializeGrid(tileNum);
-    }
+    };
   };
-
   tileNum = 0;
-  console.log(promptActive)
 });
 
 clearBtn.addEventListener('click', (e) => {
@@ -40,13 +38,10 @@ const initializeGrid = (gridSize) => {
     for (let j = 0; j < gridSize; j++) {
       let tile = document.createElement('div');
       tile.classList.add('cell');
-
       row.appendChild(tile);
     };
-
     docFrag.appendChild(row);
   };
-
   container.appendChild(docFrag);
 };
 
@@ -56,8 +51,7 @@ const removeGrid = () => {
   };
 };
 
-initializeGrid(16);
-
+// Adds 'click' event listener to each cell after grid initialized
 function addContainerEvent() {
   container.addEventListener('click', (e) => {
     e.target.classList.add('colored');
@@ -70,4 +64,5 @@ function addContainerEvent() {
   });
 };
 
+initializeGrid(16);
 addContainerEvent();
